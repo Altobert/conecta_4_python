@@ -544,30 +544,21 @@ def volver_a_jugar():
 
 def main():
     while True:
-        eleccion = input("1- Jugador vs Jugador"
+        eleccion = input("1- Jugador vs Máquina"
                          "\n"
-                         "2- Jugador vs Máquina"
-                         "\n"
-                         "4- Salir"
+                         "2- Salir"
                          "\n"
                          "Elige: ")
-        if eleccion == "4":
-            break
-
         if eleccion == "1":
-            filas, columnas = solicitar_filas(), solicitar_columnas()
-            while True:
-                tablero = crear_tablero(filas, columnas)
-                jugador_vs_jugador(tablero)
-                if not volver_a_jugar():
-                    break
-        if eleccion == "2":
             filas, columnas = solicitar_filas(), solicitar_columnas()
             while True:
                 tablero = crear_tablero(filas, columnas)
                 jugador_vs_computadora(tablero)
                 if not volver_a_jugar():
                     break
+        
+        if eleccion == "2":
+            break
 
 
 main()
